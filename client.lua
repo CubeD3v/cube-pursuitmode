@@ -135,8 +135,8 @@ function ApplyVehicleMods(Vehicle)
     SetVehicleXenonLightsColour(Vehicle, Config["VehicleModifications"][PursuitMode]["XenonHeadlightsColor"]) -- Xenon Headlights Color
 
     if Config.SlowDown then
-        local speed = GetEntitySpeed(vehicle)
-        SetVehicleForwardSpeed(vehicle, speed * (1.0 - Config.SlowdownPercentage))
+        local Speed = GetEntitySpeed(vehicle)
+        SetVehicleForwardSpeed(vehicle, Speed * (1.0 - Config.SlowdownPercentage))
     end
 end
 
@@ -174,12 +174,12 @@ function PlaySound(vehicle)
         if Config.PlayerServerSyncedSound then
             local MaxSoundDistance = Config.MaxSoundDistance
             local Speed = GetEntitySpeed(vehicle)
-            if speed > 30.0 then
-                maxSoundDistance = Config.MaxSoundDistanceAtMediumSpeeds
-            elseif speed > 70.0 then
-                maxSoundDistance = Config.MaxSoundDistanceAtHighSpeeds
+            if Speed > 30.0 then
+                MaxSoundDistance = Config.MaxSoundDistanceAtMediumSpeeds
+            elseif Speed > 70.0 then
+                MaxSoundDistance = Config.MaxSoundDistanceAtHighSpeeds
             end
-            TriggerServerEvent('InteractSound_SV:PlayWithinDistance', maxSoundDistance, Config.SoundFile, Config.SoundVolume)
+            TriggerServerEvent('InteractSound_SV:PlayWithinDistance', MaxSoundDistance, Config.SoundFile, Config.SoundVolume)
         else
             TriggerEvent('InteractSound_CL:PlayOnOne', Config.SoundFile, Config.SoundVolume)
         end
