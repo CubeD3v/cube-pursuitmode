@@ -137,6 +137,7 @@ function ApplyVehicleMods(Vehicle)
     if Config.SlowDown then
         local speed = GetEntitySpeed(vehicle)
         SetVehicleForwardSpeed(vehicle, speed * (1.0 - Config.SlowdownPercentage))
+    end
 end
 
 function CycleVehicleMode(Vehicle)
