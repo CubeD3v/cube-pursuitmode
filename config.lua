@@ -42,7 +42,7 @@ Config.SlowdownPercentage = 0.2 -- 0.2 => 20%
 Config.PlaySound = true -- Other options include: 'true' or 'false'
 
 Config.PlayerServerSyncedSound = true -- If true, sounds can be heard by other players. Other options include: 'true' or 'false'
-Config.SoundDistance = 3.0 -- Server Synced only.
+Config.MaxSoundDistance = 3.0 -- Server Synced only.
 Config.MaxSoundDistanceAtMediumSpeeds = 5.0 -- Do not touch if you don't know what you're doing!
 Config.MaxSoundDistanceAtHighSpeeds = 10.0 -- Do not touch if you don't know what you're doing!
 
